@@ -1,4 +1,16 @@
 ========first steps
 rails g rspec:install
-git init
-
+git init 
+git remote add origin git@github.com:doggerel/micropost
+git push -u origin master
+heroku create
+simple-day-3137
+heroku keys:add
+git push heroku master
+heroku uses pg database gem 'sqlite3' , :group => :development
+heroku open #opens heroku web page
+rails g scaffold User name:string email:string
+rake db:migrate
+rails g controller Pages home contact
+spork --bootstrap
+[time] rspec --drb --colour spec/
