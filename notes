@@ -1,0 +1,4 @@
+========first steps
+rails g rspec:install
+git init
+
