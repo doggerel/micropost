@@ -1,0 +1,56 @@
+//variables
+$left-side-color: #000;
+$right-side-color: #000;
+$center-panel-color:#CCC;
+$min-height:600px;
+$min-height-header:150px;
+//mixins
+@mixin menu{
+  padding-right:4px;
+  padding-top:10px;
+  list-style-type:none;
+  display:inline-block;
+}
+
+//css
+.filler-side{
+  background: $left-side-color;
+  min-height: $min-height;
+}
+.menu-side{
+  background: $right-side-color;
+  min-height: $min-height;
+}
+.center-panel{
+  background:$center-panel-color;
+  min-height:580px; 
+  padding-left:4px;
+  text-align:center;
+  padding-top:20px;
+  margin:1px;
+}
+.header{
+  min-height:$min-height-header;
+  background: #CCC;
+  margin-bottom:20px;
+  text-align:center;
+}
+nav{
+  float:right;
+}
+nav ul{
+  padding:0;
+  margin:0;
+}
+nav ul li{
+  @include menu
+}
+footer{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+footer ul li{
+  @include menu
+}
+li a{text-decoration:none;}
