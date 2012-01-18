@@ -4,7 +4,7 @@ git init
 git remote add origin git@github.com:doggerel/micropost
 git push -u origin master
 heroku create
-simple-day-3137
+young-journey-5908
 heroku keys:add
 git push heroku master
 heroku uses pg database gem 'sqlite3' , :group => :development
@@ -14,3 +14,4 @@ rake db:migrate
 rails g controller Pages home contact
 spork --bootstrap
 [time] rspec --drb --colour spec/
+git push

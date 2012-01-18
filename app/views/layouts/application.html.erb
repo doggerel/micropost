@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Micropost Sample | <%=@title %></title>
+  <title><%=title %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div class="span-16 first"
+  <%= yield %>
+</div>
+<div class="span-7 last">
+  <h1>
+  fred
+</h1>
+</div>
 
 </body>
 </html>

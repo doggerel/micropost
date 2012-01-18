@@ -17,6 +17,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'blueprint-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -29,6 +30,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'haml'
 group :development do
   gem 'rspec-rails', '2.6.1'
 end
