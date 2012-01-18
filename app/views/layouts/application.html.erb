@@ -5,16 +5,32 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--stylesheet layouts-->
 </head>
-<body>
-  <div class="span-16 first"
-  <%= yield %>
-</div>
-<div class="span-7 last">
-  <h1>
-  fred
-</h1>
-</div>
-
-</body>
+  <body>
+  <div class="container" >
+    <div class="span-24 last header">
+      <nav class="header-menu global-menu">
+      <%=render "layouts/menu"%>
+      </nav>
+      header
+    </div>
+    <div class="span-4 first filler-side">
+      cat
+    </div>
+    <div class="span-9 center-panel prepend-1 append-1 lighten left global-menu">
+      <%= yield %>
+        <%=render "layouts/footer"%>
+    </div>
+    <div class="span-8 last menu-side left">
+      <h1>
+        fred
+      </h1>
+    </div>
+    <div class="span-24">
+    </div>
+  </div>
+  </body>
 </html>
+
+
