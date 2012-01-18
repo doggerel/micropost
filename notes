@@ -1,3 +1,9 @@
+.\" Man for rails sample app
+.\" Contact remotezen@sympatico.ca
+.TH man 1 "06 Jan 2012" "1.0" "rails sample app man page"
+.SH NAME 
+  rails sample app step by step guidelines
+.SH DESCRITION
 ========first steps
 rails g rspec:install
 git init 

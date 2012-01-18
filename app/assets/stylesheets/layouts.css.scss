@@ -6,8 +6,6 @@ $min-height:600px;
 $min-height-header:150px;
 //mixins
 @mixin menu{
-  padding-right:4px;
-  padding-top:10px;
   list-style-type:none;
   display:inline-block;
 }
@@ -24,9 +22,7 @@ $min-height-header:150px;
 .center-panel{
   background:$center-panel-color;
   min-height:580px; 
-  padding-left:4px;
   text-align:center;
-  padding-top:20px;
   margin:1px;
 }
 .header{

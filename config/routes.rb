@@ -1,4 +1,6 @@
 Micropost::Application.routes.draw do
+  get "users/new"
+
   get "pages/home"
 
   get "pages/contact"
@@ -6,6 +8,7 @@ Micropost::Application.routes.draw do
   get "pages/help"
   
   match '/contact', :to=> 'pages#contact'
+  match '/signup',  :to=>'users#new'
   match '/about',   :to=> 'pages#about'
   match '/help',    :to=>'pages#help' 
   root :to=> 'pages#home'
