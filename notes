@@ -22,3 +22,6 @@ spork --bootstrap
 [time] rspec --drb --colour spec/
 git push
 rails g integration_test layout_links
+rake db:test:prepare
+rails g migration add_email_uniqueness_index
+

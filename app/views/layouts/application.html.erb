@@ -13,21 +13,19 @@
       <nav class="header-menu global-menu">
       <%=render "layouts/menu"%>
       </nav>
-      header
     </div>
     <div class="span-4 first filler-side">
       cat
     </div>
     <div class="span-11 center-panel  lighten left global-menu">
       <%= yield %>
-        <%=render "layouts/footer"%>
+      <%=debug(params) if Rails.env.development?%>
+      <%=render "layouts/footer"%>
     </div>
     <div class="span-8 last menu-side left">
       <h1>
         fred
       </h1>
-    </div>
-    <div class="span-24">
     </div>
   </div>
   </body>

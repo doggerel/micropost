@@ -32,6 +32,7 @@ gem 'blueprint-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'haml'
 group :development do
+  gem 'annotate', '2.4.0'
   gem 'rspec-rails', '2.6.1'
 end
 group :test do
