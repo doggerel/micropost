@@ -23,12 +23,14 @@
       <%=render "layouts/footer"%>
     </div>
     <div class="span-8 last menu-side left">
-      <h1>
-        fred
-      </h1>
+      <div class="menu-side">
+    <%if @user%> 
+      <%=link_to @user.name, users_path(@user)%>
+      <%=avatar_url(@user,20)%>
+    <%end%>
+  </div>
     </div>
   </div>
   </body>
 </html>
-
 

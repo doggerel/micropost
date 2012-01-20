@@ -31,9 +31,14 @@ gem 'blueprint-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'haml'
+gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'wirble'
 group :development do
   gem 'annotate', '2.4.0'
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '2.6.1'
+  gem 'watchr'
+  gem 'rspec-rails-mocha'
 end
 group :test do
   gem 'rspec-rails', '2.6.1'

@@ -1,13 +1,31 @@
 //variables
-$left-side-color: #000;
-$right-side-color: #000;
+$left-side-color: #4c7d7e;
+$right-side-color: #56728f;
 $center-panel-color:#CCC;
 $min-height:600px;
 $min-height-header:150px;
+$link-color:#FFF;
+//#4c7d7e
+//
 //mixins
 @mixin menu{
   list-style-type:none;
   display:inline-block;
+}
+
+.header-menu a{
+  color:$link-color;
+  text-decoration:none;
+}
+
+.header-menu a:hover{
+  padding-top:20px;
+  color:$link-color;
+}
+
+.header-menu a:active{
+  padding-top:20px;
+  color:$link-color;
 }
 
 //css
@@ -27,7 +45,7 @@ $min-height-header:150px;
 }
 .header{
   min-height:$min-height-header;
-  background: #CCC;
+  background: url("carbon.png");
   margin-bottom:20px;
   text-align:center;
 }
@@ -45,8 +63,39 @@ footer{
   text-align:center;
   margin-left:auto;
   margin-right:auto;
+  background: url('carbon.png');
+  color:#FFF;
+}
+.footer {
+  max-width:200px;
+  margin: auto 0;
+
 }
 footer ul li{
-  @include menu
+  @include menu;
+   color: #FFF;
 }
-li a{text-decoration:none;}
+footer  li a:visited {
+  text-decoration:none;
+   color: #ffe;
+}
+footer  li a:active {
+  text-decoration:none;
+   color: #eee;
+}
+footer a{
+  text-decoration:none;
+  padding:8px;
+   color: $link-color;
+}
+
+.menu-side{
+  margin: auto 0;
+  padding-top: 20px;
+  padding-left:8px;
+  color:white;
+}
+.menu-side a{
+  text-decoration:none;
+  color:$link-color;
+}
