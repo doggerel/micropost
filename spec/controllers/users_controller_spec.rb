@@ -15,6 +15,11 @@ describe UsersController do
     response.should have_selector("title",
             :content=>@base_title + "Sign up")
   end
+  it "should have a name field" do
+    get :new
+    response.should have_selector("input[name='user[name]'][type='text']")
+  end
+  
  end
   describe "Get 'show'" do
     before(:each) do
