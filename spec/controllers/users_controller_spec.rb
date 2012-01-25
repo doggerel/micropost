@@ -21,7 +21,15 @@ describe UsersController do
   end
   it "should have a email field" do
     get :new
-    response.should have_selector("input[name='user[email]'][type='text']")
+    response.should have_selector("input[name='user[email]'][type='email']")
+  end
+  it "should have a password field" do
+    get :new
+    response.should have_selector("input[name='user[password]'][type='password']")
+  end
+  it "should have a password  confirmation field" do
+    get :new
+    response.should have_selector("input[name='user[password_confirmation]'][type='password']")
   end
   
  end
@@ -84,6 +92,12 @@ describe UsersController do
        post :create, :user => @attr
        flash[:success].should =~/Welcome to the micropost app/i
      end
+    it "should have a flash div" do
+      post :create, :user=>@attr 
+      debugger
+      response.should have_selector("div",:class=>"success",
+                                   :content=> "Welcome to the micropost app")
+  end
     end
   end
 end

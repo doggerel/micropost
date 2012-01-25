@@ -14,7 +14,7 @@
       <%=render "layouts/menu"%>
       </nav>
       <%flash.each do |k,v|  %>
-        <div class="flash<%=k%>"><%=v %></div>
+        <%= content_tag(:div, v, :class=>"#{k}") %>
       <%end %>
     </div>
     <div class="span-4 first filler-side">

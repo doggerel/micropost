@@ -34,6 +34,7 @@ gem 'haml'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'wirble'
 gem "simple_form"
+gem 'simplecov'
 group :development do
   gem 'annotate', '2.4.0'
   gem 'rspec-rails', '2.6.1'
@@ -41,10 +42,12 @@ group :development do
   gem 'rspec-rails-mocha'
 end
 group :test do
+  
   gem 'rspec-rails', '2.6.1'
   gem 'webrat', '0.7.1'
   gem 'spork', '0.9.0.rc8'
   gem 'factory_girl','2.2'
+  gem 'ruby-debug19'
 end
 gem 'rspec'
 gem 'heroku'
