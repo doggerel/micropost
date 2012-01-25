@@ -1,6 +1,6 @@
 //variables
-$left-side-color: #4c7d7e;
-$right-side-color: #56728f;
+$left-side-color: #fff;
+$right-side-color: #fff;
 $center-panel-color:#CCC;
 $min-height:600px;
 $min-height-header:150px;
@@ -12,7 +12,22 @@ $link-color:#FFF;
   list-style-type:none;
   display:inline-block;
 }
+#notice{
+  background:#111;
+  color:#FFF;
+  border: 1px #FFF solid;
+}
+#success{
+  background:#111;
+  color:#FFF;
+  border: 1px #FFF solid;
+}
 
+#error{
+  background:#111;
+  color:#FFF;
+  border: 1px #FFF solid;
+}
 .header-menu a{
   color:$link-color;
   text-decoration:none;
@@ -93,7 +108,8 @@ footer a{
   margin: auto 0;
   padding-top: 20px;
   padding-left:8px;
-  color:white;
+  border: 1px solid #CCC;
+  color:#111;
 }
 .menu-side a{
   text-decoration:none;

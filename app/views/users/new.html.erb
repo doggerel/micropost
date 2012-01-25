@@ -1,1 +1,8 @@
-<h1>users new</h1>
+<%=simple_form_for @user do |f|%>
+<%= render 'shared/error_message' %>
+  <%=f.input :name,  :length=>20 %>
+  <%=f.input :email  %>
+  <%=f.input :password %>
+  <%=f.input :password_confirmation , :label=>"Confirmation"%>
+  <%=f.submit %>
+<%end %>

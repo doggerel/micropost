@@ -1,0 +1,11 @@
+=if @user.errors.any?
+  #error_explanation
+    =pluralize(@user.errors.count, "error")
+    %h2
+      prohibted this user user form being saved
+    %p   
+      there were problems with the following fields:
+    %ul  
+      =@user.errors.full_messages.each do |msg|
+        %li
+          =msg
