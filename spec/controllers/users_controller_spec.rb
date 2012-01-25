@@ -19,6 +19,10 @@ describe UsersController do
     get :new
     response.should have_selector("input[name='user[name]'][type='text']")
   end
+  it "should have a email field" do
+    get :new
+    response.should have_selector("input[name='user[email]'][type='text']")
+  end
   
  end
   describe "Get 'show'" do
