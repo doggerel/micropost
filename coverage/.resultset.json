@@ -1,0 +1,221 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/grit/Projects/rails/micropost/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/application_helper.rb": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/practices_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/controllers/practices_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/controllers/users_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1327511839
+  },
+  "/Users/grit/.rvm/gems/ruby-1.9.2-p180/bin/spork ": {
+    "coverage": {
+      "/Users/grit/Projects/rails/micropost/app/helpers/application_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/practices_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/grit/Projects/rails/micropost/app/controllers/application_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1327521654
+  }
+}

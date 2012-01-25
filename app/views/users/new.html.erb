@@ -1,5 +1,5 @@
 <%=simple_form_for @user do |f|%>
-<%= render 'shared/error_message' %>
+  <%= render :partial=>'shared/error_message' %>
   <%=f.input :name,  :length=>20 %>
   <%=f.input :email  %>
   <%=f.input :password %>

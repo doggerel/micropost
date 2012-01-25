@@ -1,4 +1,8 @@
 Micropost::Application.routes.draw do
+  get "practices/index"
+  resources :sessions, :only =>[:new,:create, :destroy]
+
+
   get "users/new"
 
   get "pages/home"
@@ -11,6 +15,8 @@ Micropost::Application.routes.draw do
   match '/signup',  :to=>'users#new'
   match '/about',   :to=> 'pages#about'
   match '/help',    :to=>'pages#help' 
+  match '/signin', :to =>'sessions#new'
+  match '/signout', :to =>'sessions#destroy'
   root :to=> 'pages#home'
   resources :users
 

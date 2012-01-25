@@ -29,4 +29,6 @@ rake db:reset
 how to use spark
     ul[class=nav]>li*5>a[href=http://url.com] { Link }  
     div#container > header > h1 { My Header } < + div#content { My Content } + footer > h2 { My Footer }  
-
+install best_pracitces gem
+rails_best_practices -f html
+rails_best_practices -f html | tee app/view/practices/index.html.erb

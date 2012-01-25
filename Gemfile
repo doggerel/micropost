@@ -34,8 +34,9 @@ gem 'haml'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'wirble'
 gem "simple_form"
-gem 'simplecov'
 group :development do
+  gem 'simplecov', :require=>false
+  gem 'rails_best_practices'
   gem 'annotate', '2.4.0'
   gem 'rspec-rails', '2.6.1'
   gem 'watchr'

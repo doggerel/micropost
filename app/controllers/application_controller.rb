@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
    def avatar_url(user,size=48)
      unless user.nil?
        default_url = "#{root_url}images/guest.png"  
