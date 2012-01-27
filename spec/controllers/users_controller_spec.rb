@@ -92,12 +92,17 @@ describe UsersController do
        post :create, :user => @attr
        flash[:success].should =~/Welcome to the micropost app/i
      end
-    it "should have a flash div" do
-      post :create, :user=>@attr 
-      debugger
-      response.should have_selector("div",:class=>"success",
-                                   :content=> "Welcome to the micropost app")
-  end
+     it "should have a flash div" do
+       post :create, :user=>@attr 
+       debugger
+       response.should have_selector("div.flash.success",
+                                    :content=>"Welcome to the Micropost app")
+   
+     end
+     it "should sign the user in" do
+       post :create, :user => @attr
+       controller.should be_signed_in
+     end
     end
   end
 end

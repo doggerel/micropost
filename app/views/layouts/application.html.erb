@@ -11,10 +11,12 @@
   <div class="container" >
     <div class="span-23 last header">
       <nav class="header-menu global-menu">
-      <%=render "layouts/menu"%>
+      <%=render "layouts/header"%>
       </nav>
       <%flash.each do |k,v|  %>
-        <%= content_tag(:div, v, :class=>"#{k}") %>
+        <%=content_tag(:div, :class=>"flash#{k}") do %>
+          v
+        <%end %>
       <%end %>
     </div>
     <div class="span-4 first filler-side">
