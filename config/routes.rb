@@ -2,6 +2,8 @@ Micropost::Application.routes.draw do
   get "coverages/index"
 
   get "practices/index"
+  resources :sessions, :only=>[:new,:create], 
+    :contraints =>{:protocal =>"https"}
   resources :sessions, :only =>[:new,:create, :destroy]
 
 

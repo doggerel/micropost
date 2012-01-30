@@ -1,5 +1,8 @@
 <h1>Pages#home</h1>
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<%unless signed_in?   %>
+<%= link_to "Sign up now!", signup_path(:protocal=>"https"), 
+  :class => "signup_button round" %>
 <br>
-<%=logo "signup.png"%>
+<%=logo_sign_up "signup.png"%>
+<%end %>
 <p>Find me in app/views/pages/home.html.erb</p>

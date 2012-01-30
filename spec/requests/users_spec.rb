@@ -18,14 +18,12 @@ describe "Users" do
       end
     end
     describe "success" do
+      before(:each) do
+        @user = Factory(:user)
+      end
       it "should make a new user" do
       lambda do
-        visit signup_path
-        fill_in :name, :with =>"Fred hudson"
-        fill_in :email, :with => "grit@sdf.lonestar.org"   
-        fill_in  :password, :with => "password"
-        fill_in "Confirmation", :with =>"password"
-        click_button
+        integration_sign_in(@user)
         response.should render_template('users/show')
       end.should change(User,:count).by(1)
     end
@@ -33,11 +31,11 @@ describe "Users" do
 end
   describe "sign in/out" do
     describe "failure" do
+      before(:each) do
+        @user = Factory(:user)
+      end
       it "should not sign a user in" do
-        visit signin_path
-        fill_in :email, :with=>""
-        fill_in :email, :with=>""
-        click_button
+        integration_sign_in(@user)
         response.should have_selector("div.flash.error",
                                      :content=>"Invalid")
       end
@@ -45,10 +43,7 @@ end
     describe "success" do
       it "should sign a user in and out" do
         user = Factory(:user)
-        visit signin_path
-        fill_in :email, :with => user.email
-        fill_in :password, :with =>user.password
-        click_button
+        integration_sign_in(user)
         controller.should be_signed_in
         click_link "Sign out"
         controller.should_not be_signed_in

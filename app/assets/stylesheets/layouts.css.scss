@@ -2,7 +2,7 @@
 //variables
 $left-side-color: #fff;
 $right-side-color: #fff;
-$center-panel-color:#CCC;
+$center-panel-color:#222;
 $min-height:600px;
 $min-height-header:150px;
 $link-color:#FFF;
@@ -58,6 +58,17 @@ $link-color:#FFF;
   min-height:580px; 
   text-align:center;
   margin:1px;
+  color: #eee;
+  @include rounded-corners(10px);
+  @include shadow-outer 
+}
+.inner-center-panel{
+  background:#EEE;
+  @include shadow-inner;
+  color:#111;
+  min-height:560px;
+  text-align:center;
+  margin:10px;
 }
 .header{
   min-height:$min-height-header;
