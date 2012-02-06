@@ -23,7 +23,7 @@ describe "Users" do
       end
       it "should make a new user" do
       lambda do
-        integration_sign_in(@user)
+        test_sign_in(@user)
         response.should render_template('users/show')
       end.should change(User,:count).by(1)
     end
@@ -49,5 +49,5 @@ end
         controller.should_not be_signed_in
       end
     end
+    end
   end
-end

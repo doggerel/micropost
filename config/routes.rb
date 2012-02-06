@@ -15,12 +15,12 @@ Micropost::Application.routes.draw do
   get "pages/about"
   get "pages/help"
   
-  match '/contact', :to=> 'pages#contact'
-  match '/signup',  :to=>'users#new'
-  match '/about',   :to=> 'pages#about'
-  match '/help',    :to=>'pages#help' 
-  match '/signin', :to =>'sessions#new'
-  match '/signout', :to =>'sessions#destroy'
+  match 'contact', :to=> 'pages#contact'
+  match 'signup',  :to=>'users#new'
+  match 'about',   :to=> 'pages#about'
+  match 'help',    :to=>'pages#help' 
+  match 'signin', :to =>'sessions#new'
+  match 'signout', :to =>'sessions#destroy'
   root :to=> 'pages#home'
   resources :users
 

@@ -1,11 +1,13 @@
-=if @user.errors.any?
+=if object.errors.any?
   #error_explanation
-    =pluralize(@user.errors.count, "error")
-    %h2
-      prohibted this user user form being saved
-    %p   
+    %h2 
+      =pluralize(object.errors.count, "error")
+      prohibted this 
+      =object.class.to_s.underscore.humanize.downcase
+      from being saved:
+    %p 
       there were problems with the following fields:
     %ul  
-      =@user.errors.full_messages.each do |msg|
+      =object.errors.full_messages.each do |msg|
         %li
           =msg

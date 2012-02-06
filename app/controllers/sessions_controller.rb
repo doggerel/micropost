@@ -14,8 +14,7 @@ class SessionsController < ApplicationController
     else
       remember_me = params[:session][:remember]
       sign_in(user, remember_me)
-      redirect_to user
-      
+      redirect_back_or user
     end
   end
   

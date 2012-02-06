@@ -82,4 +82,16 @@ RSpec.configure do |config|
     fill_in :password, :with => user.password
     click_button
   end
+  def user_empty_hash
+      @attr = {:email=>"",
+              :name=>"",
+              :password =>"",
+               :password_confirmation=>""}
+  end
+  def user_full_hash
+      @attr = {:email=>"bazboo@bazboo.com",
+              :name=>"Alfred c Newman",
+              :password =>"password",
+               :password_confirmation=>"password"}
+  end
 end

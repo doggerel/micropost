@@ -11,4 +11,5 @@ class ApplicationController < ActionController::Base
      end
   end
    helper_method :avatar_url
+   helper_method :external_link
 end

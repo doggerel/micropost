@@ -1,0 +1,11 @@
+=simple_form_for(@user) do |f|
+  =render :partial=>'shared/error_message'
+  =f.input :name
+  =f.input :email
+  =f.input :password
+  =f.input :password_confirmation
+  =f.submit
+=gravatar_for @user  
+%a {href="//gravatar.com/emails"}change
+
+

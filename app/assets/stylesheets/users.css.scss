@@ -12,5 +12,45 @@
   color:red;
   padding:6px;
   margin-bottom:20px;
-  
 }
+ul.users{
+  margin-top: 1em;
+}
+li .admin{
+  color:#f00;
+  font-family:serif;
+}
+
+.users li{
+  text-align:left;
+  list-style:none;
+  margin-bottom:4px;
+  font-size:1.1em;
+  vertical-align:center
+}
+.users li a{text-decoration:none}
+.users li a:visited{
+  color:#CCC;
+  opacity: 0.70
+}
+.users li a:hover{
+  color:#eee;
+  opacity: 0.70
+}
+.pagination { padding: 3px; margin: 3px; }
+.pagination a { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #aaaadd; text-decoration: none; color: #000099; }
+.pagination a:hover,
+.pagination a:active { border: 1px solid #000099; color: #000; }
+.pagination span.current { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #000099; font-weight: bold; background-color: #000099; color: #FFF; }
+.pagination span.disabled { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #eee; color: #ddd; }
+.pwdcalc-hints{display:none;}
+.pwdcalc[data-complexity="weak"]{color:#F89406;}
+.pwdcalc[data-complexity="fair"]{color:#339900;}
+.pwdcalc[data-complexity="good"]{color:#339900;}
+.pwdcalc[data-complexity="strong"]{color:#339900;}
+.pwdcalc[data-complexity="very-strong"]{color:#339900;}
+.pwdcalc[data-complexity="dictionary-word"]{color:#CC3333;}
+
+/* From http://workingwithrails.com/railsplugin/4765-will-paginate */
+
+

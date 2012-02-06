@@ -1,8 +1,1 @@
-<%=simple_form_for @user do |f|%>
-  <%= render :partial=>'shared/error_message' %>
-  <%=f.input :name,  :length=>20 %>
-  <%=f.input :email  %>
-  <%=f.input :password %>
-  <%=f.input :password_confirmation , :label=>"Confirmation"%>
-  <%=f.submit %>
-<%end %>
+<%= render :partial=> 'form' , :object=>@user%>

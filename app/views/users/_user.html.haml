@@ -1,6 +1,12 @@
 %li  
-  =avatar_url user
-%li  
-  =user.name
-%li
-  =user.email
+  =avatar_url user  
+  &nbsp&nbsp
+  &nbsp&nbsp
+  = link_to user.name, user 
+  -if current_user.admin?
+    &nbsp|&nbsp
+    =link_to "delete", user, :method=>:delete, 
+                             :confirm =>"You sure you want to delete",
+                             :title => "Delete #{user.name}"
+                             
+

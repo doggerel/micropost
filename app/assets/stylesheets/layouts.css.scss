@@ -69,6 +69,7 @@ $link-color:#FFF;
   min-height:560px;
   text-align:center;
   margin:10px;
+  margin-bottom:20px;
 }
 .header{
   min-height:$min-height-header;
@@ -96,8 +97,13 @@ footer{
 .footer {
   max-width:200px;
   margin: auto 0;
-
+  margin-bottom:20px;
+  
 }
+footer ul{
+  padding-bottom:20px;
+}
+
 footer ul li{
   @include menu;
    color: #FFF;
@@ -134,4 +140,7 @@ footer a{
   padding:8px;
   @include shadow-inner;
   @include rounded-corners(4px);
+}
+#error_explaination{
+  max-width:400px;
 }

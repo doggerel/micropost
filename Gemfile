@@ -18,6 +18,8 @@ end
 
 gem 'jquery-rails'
 gem 'blueprint-rails'
+gem 'pwdcalc'
+gem 'formtastic'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -34,7 +36,9 @@ gem 'haml'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'wirble'
 gem "simple_form"
+gem 'will_paginate', '3.0.pre2'
 group :development do
+  gem 'faker'
   gem 'simplecov', :require=>false
   gem 'rails_best_practices'
   gem 'annotate', '2.4.0'

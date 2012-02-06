@@ -1,25 +1,38 @@
-<%= form_for(form) do |f| %>
-  <% if form.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(form.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% form.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%=semantic_form_for form do |f|%>
+  <%= render 'shared/error_message', :object=> f.object %>
+  <%=f.inputs do  %>
+    <%=f.input :name,  :length=>20 %>
+    <%=f.input :email  %>
+    <%=f.input :password, 
+      :hint=>"strong password safe guard our site should contain an upper case and lower case characters and be at least 8 characters in length long",
+      :as => :pwdcalc
+    %>
+    <%=f.input :password_confirmation , :label=>"Confirmation"%>
+  <%end %>
+  <%=f.buttons do  %>
+    <%=f.commit_button %>
+  <%end  %>
+<%end %>
+<%= pwdcalc_hints %>
+<!--
+class String
+  PASSWORD_SETS = {
+    /[a-z]/ => 26,
+    /[A-Z]/ => 26,
+    /[0-9]/ => 10,
+    /[^\w]/ => 32
+  }
+  
+  def password_strength
+    set_size = 0
+    PASSWORD_SETS.each_pair {|k,v| set_size += v if self =~ k}
+    
+    combinations = set_size ** length
+    
+    # assuming 1000 tries per second
+    days = combinations.to_f / 1000 / 86400
+    
+    days / 365
+  end
+end
+-->
