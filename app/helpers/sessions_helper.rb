@@ -4,14 +4,17 @@ module SessionsHelper
     cookies.permanent.signed[:remember_token] = [user.id, user.salt]
  #   self.current_user = user
     else
-      cookies.permanent.signed[:remember_token] = [user.id, user.salt]
-    #  cookies.signed[:remember_token] = {:value =>[user.id,user.salt],
-     #                            :expires => 1.hour.from_now.utc}
+      #cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+     cookies.signed[:remember_token] = {:value =>[user.id,user.salt],
+                                 :expires => 1.hour.from_now.utc}
   #    self.current_user = user
     end
     self.current_user = user
   end
   
+  def authenticate
+    deny_access unless signed_in?
+  end
   def current_user=(user)
     @current_user = user
   end

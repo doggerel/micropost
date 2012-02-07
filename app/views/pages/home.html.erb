@@ -1,8 +1,5 @@
-<h1>Pages#home</h1>
-<%unless signed_in?   %>
-<%= link_to "Sign up now!", signup_path(:protocal=>"https"), 
-  :class => "signup_button round" %>
-<br>
-<%=logo_sign_up "signup.png"%>
+<%if !signed_in?   %>
+  <%= render :partial => 'pages/not_signed_' %> 
+<%else %>
+  <%= render 'shared/mpost_form' %>
 <%end %>
-<p>Find me in app/views/pages/home.html.erb</p>

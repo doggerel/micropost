@@ -1,7 +1,12 @@
 <ul class="user-show">
   <%=render @user%>
 </ul>
-
+<%unless @user.mposts.empty? %>
+  <ul>
+    <%=render @mposts %>
+  </ul>
+  <%= will_paginate @mposts %>
+<%end %>
 <%= link_to 'Edit', edit_user_path(@user) unless !current_user?(@user)%> 
 
 <%= link_to 'Back', users_path %>

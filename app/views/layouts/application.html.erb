@@ -33,6 +33,11 @@
     </div>
     <div class="span-8 last  left">
       <div class="menu-side">
+        <%if signed_in?  %>
+        <ul class="user-stats">
+          <%= render 'layouts/rightside' %>
+        </ul>
+      <%end %>
       </div>
     </div>
   </div>

@@ -75,6 +75,7 @@ describe UsersController do
   describe "Get 'show'" do
     before(:each) do
       @user = Factory(:user)
+      test_sign_in(@user)
     end
     it "should be successful" do
       get :show, :id => @user
@@ -83,6 +84,12 @@ describe UsersController do
       get :show, :id => @user
       assigns(:user).should == @user
 
+    end
+    it "should show the user's mposts" do
+      mp1 = Factory(:mpost,  :user=>@user, :content => "Foo bar")
+      mp2 = Factory(:mpost,  :user=>@user, :content => "Foo baz baz bar")
+      response.should have_selector("span.content", :content=>mp1.content)
+      response.should have_selector("span.content", :content=>mp2.content)
     end
   end
   describe "POST 'create'" do

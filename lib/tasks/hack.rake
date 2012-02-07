@@ -5,6 +5,7 @@ namespace :db do
       Rake::Task['db:reset'].invoke
       make_users
       make_admin
+      make_posts
     end
 end
    def make_admin
@@ -41,9 +42,8 @@ end
     def make_posts
       User.all(:limit => 50).each do |user|
         99.times do |n| 
-         post = Faker::Lorem.sentence(150)
-         title = Faker::Lorem.sentence(5)
-        user.posts.create!(:content=>post,:title=>title)
+         content = Faker::Lorem.sentence(5)
+        user.mposts.create!(:content=>content)
        end
       end
     end
@@ -56,7 +56,7 @@ end
     u.product(p).each do |post,user|
         99.times do |n| 
          comment = Faker::Lorem.sentence(5)
-         post.comments.create!(:comment=>comment, :user_id=>user.id)
+         mpost.comments.create!(:comment=>comment, :user_id=>user.id)
        end
       end
     end

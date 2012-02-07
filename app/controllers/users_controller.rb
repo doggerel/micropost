@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   end
   def show
     @user = User.find(params[:id])
+    @mposts = @user.mposts.paginate(:page=>params[:page])
     @title = @user.name
   end
   def new
@@ -64,9 +65,6 @@ class UsersController < ApplicationController
   end
   def admin
     redirect_to(root_path) unless current_user.admin?
-  end
-  def authenticate
-    deny_access unless signed_in?
   end
   def correct_user
     @user = User.find(params[:id])

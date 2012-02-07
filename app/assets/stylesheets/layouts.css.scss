@@ -144,3 +144,11 @@ footer a{
 #error_explaination{
   max-width:400px;
 }
+.menu-side{
+  @include shadow-inner;
+}
+.user-stats{
+  list-style-type:none;
+  font-size: 1.3em;
+
+}

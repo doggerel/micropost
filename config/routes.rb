@@ -5,6 +5,7 @@ Micropost::Application.routes.draw do
   resources :sessions, :only=>[:new,:create], 
     :contraints =>{:protocal =>"https"}
   resources :sessions, :only =>[:new,:create, :destroy]
+  resources :mposts, :only=>[:create, :destroy]
 
 
   get "users/new"
