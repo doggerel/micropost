@@ -1,0 +1,25 @@
+// Place all the styles related to the mposts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.mpost{
+  text-align:left;
+  list-style-type:none;
+  height:70px;
+  margin-bottom:10px;
+  border-bottom:1px solid #ccc;
+  padding-bottom: 8px;
+  padding-left:4px;
+  padding-top:4px;
+  font-size: 1.1em;
+} 
+.content-even{
+  background:#fff;
+}
+.content-odd{
+  background:#eef;
+}
+.timestamp{
+  font-style:italic;
+  font-size:.9em;
+  opacity: 0.90;
+}

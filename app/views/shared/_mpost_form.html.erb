@@ -1,0 +1,10 @@
+<h3>What's up Doc?</h3>
+<%= form_for @mpost do |f| %>
+  <%= render 'shared/error_message' , :object => f.object%>
+  <div class="mpost-entry">
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<%end %>

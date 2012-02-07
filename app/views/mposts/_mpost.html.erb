@@ -1,0 +1,10 @@
+<li class="mpost <%=cycle("content-even","content-odd")  %>">
+  <span class="content" >
+    <%= mpost.content %>
+  </span>
+  <br>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(mpost.created_at) %> ago.
+  </span>
+
+</li>
