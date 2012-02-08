@@ -6,11 +6,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-//= require jquery.YAPSM.min
 //= require jquery.pwdcalc
 //= require jquery.qtip
 //= require formtastic.qtip2
+//= require charCount
+//= require microposts
+//= require jquery.limit 
+//= require_tree .
 
 
 

@@ -1,10 +1,11 @@
 // Place all the styles related to the mposts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "utility";
 .mpost{
   text-align:left;
   list-style-type:none;
-  height:70px;
+  min-height:70px;
   margin-bottom:10px;
   border-bottom:1px solid #ccc;
   padding-bottom: 8px;
@@ -12,6 +13,7 @@
   padding-top:4px;
   font-size: 1.1em;
 } 
+li{list-style-type:none;}
 .content-even{
   background:#fff;
 }
@@ -22,4 +24,18 @@
   font-style:italic;
   font-size:.9em;
   opacity: 0.90;
+}
+form .warning{color:#900;}	
+form .exceeded{color:#e00;}
+#mpost_content {
+  @include shadow-inner;
+}
+.counter{
+  color:green;
+  text-shadow: #999 -1px 1px 1px; //color x-axis y-axis blur
+  background:#0d1114;
+  border-bottom:1px solid yellow;
+  font-size:2em;
+  text-outline: 2px 2px #ff0000;
+  padding:8px;
 }

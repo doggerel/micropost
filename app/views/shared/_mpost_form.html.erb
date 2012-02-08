@@ -2,9 +2,12 @@
 <%= form_for @mpost do |f| %>
   <%= render 'shared/error_message' , :object => f.object%>
   <div class="mpost-entry">
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :size => '40x4' %>
+    <span class="counter"></span>
   </div>
+  <br><br>
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
 <%end %>
+<br><br>

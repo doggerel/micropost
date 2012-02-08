@@ -43,7 +43,7 @@ describe "LayoutLinks" do
   end
   describe "when not signed in" do
     it "should have a signin link" do
-      request.env['HTTPS'] = 'on'
+      #request.env['HTTPS'] = 'on'
       visit root_path
       response.should have_selector("a", :href => signin_path,
                                    :content => "Sign in")

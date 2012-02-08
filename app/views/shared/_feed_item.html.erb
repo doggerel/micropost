@@ -1,0 +1,20 @@
+<li class="mpost">
+  <span class="gravatar">
+    <%= link_to avatar_url(feed_item.user,30), feed_item.user %>
+  </span>
+  <span class="user">
+    <%= link_to feed_item.user.name, feed_item.user %>
+  
+  </span>
+  <span class="content">
+    <%= wrap(feed_item.content) %> <!--mpost helper-->
+       <%if current_user?(feed_item.user) %>
+         <%=link_to "delete", feed_item, :method=>:delete,
+           :confirm=>"are you sure?", :title=>feed_item.content%>
+       <%end %>
+  </span>
+  <br>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+  </span>
+</li>

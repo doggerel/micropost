@@ -23,7 +23,7 @@ describe "Users" do
       end
       it "should make a new user" do
       lambda do
-        test_sign_in(@user)
+        integration_sign_in(@user)
         response.should render_template('users/show')
       end.should change(User,:count).by(1)
     end
@@ -35,9 +35,9 @@ end
         @user = Factory(:user)
       end
       it "should not sign a user in" do
-        integration_sign_in(@user)
+        test_sign_in(@user)
         response.should have_selector("div.flash.error",
-                                     :content=>"Invalid")
+                                     :content=>"Invalid email/password combination")
       end
     end
     describe "success" do

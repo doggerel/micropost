@@ -52,5 +52,6 @@ module Micropost
     config.assets.version = '1.0'
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    config.assets.precompile +=%w(*.js)
   end
 end
