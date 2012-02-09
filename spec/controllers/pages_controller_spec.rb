@@ -15,7 +15,31 @@ describe PagesController do
       get 'home'
       response.should have_selector("title",
                                    :content => @base_title + "Home")
+    end
+    describe "signed in user" do
+      describe "success"
+        before(:each) do
+          @user = Factory(:user)
+          test_sign_in(@user)
+          @mpost = Factory(:mpost, :user=>@user)
+        end
+        it "should have mpost delete links" do
+          get 'home'
+          response.should have_selector("a", :href => mpost_path(@mpost),
+                                       :content=>"delete")
+        end
+        describe "failure"
+        it "should not have mpost delete links for the wrong user" do
+          user = Factory(:user)
+          test_sign_in(user)
+          other_user = Factory(:user, :email => "grit@sdf.lonestar.org")
+          other_user_posts = Factory(:mpost,:user=>other_user)
+          response.should_not have_selector("a", :href => mpost_path(other_user_posts),
+                                           :content=>'delete')
+        end
 
+      end
+       
     end
   end
 

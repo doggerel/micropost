@@ -4,7 +4,8 @@
   </span>
   <br>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(mpost.created_at) %> ago.
+    Posted by <%=mpost.user.name %> 
+     <%= time_ago_in_words(mpost.created_at) %> ago.
   </span>
-
+  <br>
 </li>

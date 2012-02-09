@@ -2,6 +2,7 @@ require 'digest'
 class User < ActiveRecord::Base
   #========Mposts
   has_many :mposts, :dependent => :destroy
+
   #===================
   email_regex = /\A[\w+\-.]+@[a-z\d+\-.]+\.[a-z]+\z/i
   attr_accessor :password

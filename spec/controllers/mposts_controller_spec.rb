@@ -45,6 +45,7 @@ describe MpostsController do
       post :create, :mpost => @attr
       flash[:success].should =~ /mpost created/i
     end
+    
   end
   end
   describe "DELETE 'destroy'" do

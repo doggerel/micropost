@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe "Mposts" do
   before(:each) do
-    user = Factory(:user)
+    @user = Factory(:user)
     visit signin_path
-    fill_in :email, :with => user.email 
-    fill_in :password, :with => user.password
+    fill_in :email, :with => @user.email 
+    fill_in :password, :with => @user.password
     click_button
   end
   describe "creation" do
@@ -21,15 +21,35 @@ describe "Mposts" do
       end
     end
     describe "success" do
+      before(:each) do
+        @content = "Lorem ipsum sit amet"
+      end
+      
       it "should make a new micropost" do
-        content = "Lorem ipsum sit amet"
         lambda do
           visit root_path
-          fill_in :mpost_content, :with => content
+          fill_in :mpost_content, :with => @content
           click_button
+        response.should have_selector("li", 
+                                    :content=> "currently has #{@user.mposts.count} post")
           response.should have_selector("span.content", 
-                                        :content=>content)
+                                        :content=>@content)
         end.should change(Mpost, :count).by(1)
+      end
+      it "should have a singular side bar mpost count" do
+        lambda do
+          integration_make_posts(@content)
+        end.should change(Mpost, :count).by(1)
+        response.should have_selector("li", 
+                                    :content=> "currently has #{@user.mposts.count} post")
+      end
+      it "should have a plural side bar mpost count" do
+        lambda do
+          integration_make_posts(@content)
+          integration_make_posts(@content)
+        end.should change(Mpost, :count).by(2)
+        response.should have_selector("li", 
+                                    :content=> "currently has #{@user.mposts.count} posts")
       end
     end
   end

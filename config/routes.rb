@@ -24,6 +24,9 @@ Micropost::Application.routes.draw do
   match 'signout', :to =>'sessions#destroy'
   root :to=> 'pages#home'
   resources :users
+  resources :users do
+    resources :mposts
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
